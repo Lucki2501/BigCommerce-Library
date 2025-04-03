@@ -1,4 +1,4 @@
-# BigCommerce-Library
+# BigCommerce Library
 Python library for BigCommerce APIs and useful utilities.  
 
 - Set your hash and token in `secrets.py`.
