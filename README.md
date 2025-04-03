@@ -1,5 +1,11 @@
 # BigCommerce-Library
-Python library for BigCommerce APIs and useful utilities
+Python library for BigCommerce APIs and useful utilities.  
+
+- Set your hash and token in `secrets.py`.
+- Select the hash and token in `main.py` > `bc.auth`.
+- Run `python main.py` in Terminal.  
+
+If a merchant token is being used (`secrets.token`), the program will run a confirmation prompt.
 
 # DOCUMENTATION
 
