@@ -51,7 +51,7 @@ call('post','/v3/payments',{args},'payments')
 
 ## Tools
 
-Pretty-printing JSON responses
+- Pretty-printing JSON responses
 ```
 pr(bc.call('get','/v3/catalog/products'))
 ```
@@ -60,61 +60,61 @@ Checking Products with Option Sets / Configurable Fields
 ```
 v2_check(pages(number of page *250 products to iterate),configurable_fields_check)
 ```
-- Example:
+Example:
 ```
 bc.v2_check(4, True)
 ```
 
-Checking used store links
+- Checking used store links
 ```
 link_check([links],categories,brands,webpages,redirects,products=false)
 ```
-- Example:
+Example:
 ```
 pr(bc.v2_link_check(['/test','/test2'], True, False, True, False))
 ```
 
-Export to CSV
+- Export to CSV
 ```
 sheet(name,headers,content)
 ```
-- Example:
+Example:
 ```
 bc.v2_link_check('products', ['product ID','product name'],[[1,'Product test'],[[2,'Product test 2'],...])
 ```
 
-Checking countries with required states
+- Checking countries with required states
 ```
 get_required_states()
 ```
-- Example:
+Example:
 ```
 pr(bc.get_required_states())
 ```
 
-Checking for Filter name duplicates
+- Checking for Filter name duplicates
 ```
 get_dup_filters()
 ```
-- Example:
+Example:
 ```
 pr(bc.get_dup_filters())
 ```
 
-Checking for product with custom field keys
+- Checking for product with custom field keys
 ```
 search_custom_fields(list)
 ```
-- Example:
+Example:
 ```
 pr(bc.search_custom_fields(['Category','category']))
 ```
 
-Checking for product with option keys
+- Checking for product with option keys
 ```
 search_options(list)
 ```
-- Example:
+Example:
 ```
 pr(bc.search_options(['Category','category']))
 ```
