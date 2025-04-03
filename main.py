@@ -10,15 +10,15 @@ from json import loads
 # AUTHENTICATION
 
 bc.auth = {
-    'hash': init.hash,
-    'token': init.token,
+    'hash': init.test_hash,
+    'token': init.test_token,
     'other': 'None'
 }
-init.check() # DO NOT REMOVE
+init.check() # DO NOT REMOVE (will request confirmation if using merchant auth)
 
 # PLAYGROUND
-bc.v2_check(8,True)
 
+pr(bc.call('get','/v3/catalog/products'))
 
 # Common samples
 
@@ -30,15 +30,15 @@ bc.v2_check(8,True)
 # GraphQL
 #pr(bc.gql({
 #     'query':'''
-#
+# QUERY HERE
  #    ''',
   #   'variables':{
-#
+# VARIABLES HERE
  #    }
  #},
 # token='',
-# admin=True,
-  #  channel_id=1
+# admin=False,
+#  channel_id=None
 #))
 
 
