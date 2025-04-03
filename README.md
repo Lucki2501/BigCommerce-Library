@@ -85,9 +85,39 @@ bc.v2_link_check('products', ['product ID','product name'],[[1,'Product test'],[
 
 Checking countries with required states
 ```
+get_required_states()
+```
+- Example:
+```
 pr(bc.get_required_states())
 ```
 
+Checking for Filter name duplicates
+```
+get_dup_filters()
+```
+- Example:
+```
+pr(bc.get_dup_filters())
+```
+
+Checking for product with custom field keys
+```
+search_custom_fields(list)
+```
+- Example:
+```
+pr(bc.search_custom_fields(['Category','category']))
+```
+
+Checking for product with option keys
+```
+search_options(list)
+```
+- Example:
+```
+pr(bc.search_options(['Category','category']))
+```
 
 ## Products
 
