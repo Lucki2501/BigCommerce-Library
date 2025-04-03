@@ -58,17 +58,29 @@ pr(bc.call('get','/v3/catalog/products'))
 
 Checking Products with Option Sets / Configurable Fields  
 ```
-v2_check(pages,configurable_fields_check)
+v2_check(pages(number of page *250 products to iterate),configurable_fields_check)
+```
+Example:
+```
+v2_check(4, True)
 ```
 
 Checking used store links
 ```
 link_check([links],categories,brands,webpages,redirects,products=false)
 ```
+Example:
+```
+v2_link_check(['/test','/test2'], True, False, True, False)
+```
 
 Export to CSV
 ```
 sheet(name,headers,content)
+```
+Example:
+```
+v2_link_check('products', ['product ID','product name'],[[1,'Product test'],[[2,'Product test 2'],...])
 ```
 
 Checking countries with required states
