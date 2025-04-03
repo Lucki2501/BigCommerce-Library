@@ -1,15 +1,9 @@
 import secrets
 import bc
-import sys
 
-msf_hash = secrets.msf_hash
-msf_token = secrets.msf_token
 
-v2_hash = secrets.v2_hash
-v2_token = secrets.v2_token
-
-code_hash = secrets.code_hash
-code_token = secrets.code_token
+test_hash = secrets.test_hash
+test_token = secrets.test_token
 
 hash = secrets.hash
 token = secrets.token
