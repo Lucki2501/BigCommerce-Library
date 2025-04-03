@@ -688,7 +688,7 @@ def v2_check(pages, configurable_fields_check=False):
             except:
                 continue
     print('Done, found '+str(x)+' Option Sets')
-    with open('Product-list.csv','w',encoding='UTF8', newline='') as f:
+    with open('option_sets.csv','w',encoding='UTF8', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(['Product ID','Product Name'])
         writer.writerows(content)
@@ -712,8 +712,12 @@ def v2_check(pages, configurable_fields_check=False):
                     print(str(product['id']) +' - ' + str(product['name']))
                 except:
                     continue
-        sheet('configurable_fields',['Product ID','Product Name'],content2)
         print('Done, found '+str(x)+' Configurable Fields')
+        with open('configurable_fields.csv','w',encoding='UTF8', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Product ID','Product Name'])
+            writer.writerows(content2)
+        
 
 
 def link_check(
