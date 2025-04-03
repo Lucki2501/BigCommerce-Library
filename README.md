@@ -40,8 +40,36 @@ call('get','/v2/orders?id:in=150')
 call('put','/v3/catalog/products/id',{args})
 ```
 ```
-call('post','payments',{args},'payments')
+call('post','/v3/payments',{args},'payments')
 ```
+
+## Tools
+
+Pretty-printing JSON responses
+```
+pr(bc.call('get','/v3/catalog/products'))
+```
+
+Checking Products with Option Sets / Configurable Fields  
+```
+v2_check(pages,configurable_fields_check)
+```
+
+Checking used store links
+```
+link_check([links],categories,brands,webpages,redirects,products=false)
+```
+
+Export to CSV
+```
+sheet(name,headers,content)
+```
+
+Checking countries with required states
+```
+get_required_states()
+```
+
 
 ## Products
 
@@ -246,27 +274,5 @@ Admin.
 
 ```
 gql(query,channel_id,cors,token,customer_token,admin,account)
-```
-
-## Tools
-
-Checking Products with Option Sets / Configurable Fields  
-```
-v2_check(pages,configurable_fields_check)
-```
-
-Checking used store links
-```
-link_check([links],categories,brands,webpages,redirects,products=false)
-```
-
-Export to CSV
-```
-sheet(name,headers,content)
-```
-
-Checking countries with required states
-```
-get_required_states()
 ```
 
